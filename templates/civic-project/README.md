@@ -1,0 +1,3 @@
+# {{PROJECT_NAME}}
+
+{{RESIDENT_PROBLEM}}

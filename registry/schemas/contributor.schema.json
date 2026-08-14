@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "githubUsername": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9-]{1,39}$"
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "pronouns": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "contributionTracks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "code",
+          "data",
+          "design",
+          "documentation",
+          "translation",
+          "accessibility-review",
+          "user-research",
+          "community-outreach",
+          "policy-or-domain-research",
+          "testing",
+          "project-management"
+        ]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "borough": {
+      "type": "string",
+      "enum": ["Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island", "Citywide"]
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "showOnCommunityPage": {
+      "type": "boolean"
+    }
+  },
+  "required": ["githubUsername", "contributionTracks", "projects", "showOnCommunityPage"],
+  "additionalProperties": false
+}

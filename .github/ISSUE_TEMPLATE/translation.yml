@@ -1,0 +1,8 @@
+name: Suggest a translation
+description: Suggest a human-reviewed translation contribution.
+labels: ["track:translation"]
+body:
+  - type: textarea
+    id: text
+    attributes: { label: Source text, language, and review notes }
+    validations: { required: true }

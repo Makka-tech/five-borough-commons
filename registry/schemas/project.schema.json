@@ -1,0 +1,519 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 180
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "discovery",
+        "prototype",
+        "pilot",
+        "maintained",
+        "needs-maintainer",
+        "paused",
+        "archived"
+      ]
+    },
+    "demo": {
+      "type": "boolean"
+    },
+    "boroughs": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island", "Citywide"]
+      }
+    },
+    "neighborhoods": {
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      }
+    },
+    "problemStatement": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "residentValue": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    },
+    "currentScope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "nonGoals": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    },
+    "repositoryUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\\/\\/.*"
+    },
+    "websiteUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\\/\\/.*"
+    },
+    "issuesUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\\/\\/.*"
+    },
+    "discussionsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\\/\\/.*"
+    },
+    "roadmapUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\\/\\/.*"
+    },
+    "maintainers": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "githubUsername": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9-]{1,39}$"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "availability": {
+            "type": "string",
+            "enum": ["available", "seeking-co-maintainer", "forming", "inactive"]
+          }
+        },
+        "required": ["displayName", "role", "availability"],
+        "additionalProperties": false
+      }
+    },
+    "partners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "verificationUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https:\\/\\/.*"
+          },
+          "relationship": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          }
+        },
+        "required": ["name", "verificationUrl", "relationship"],
+        "additionalProperties": false
+      }
+    },
+    "contributionTracks": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "track": {
+            "type": "string",
+            "enum": [
+              "code",
+              "data",
+              "design",
+              "documentation",
+              "translation",
+              "accessibility-review",
+              "user-research",
+              "community-outreach",
+              "policy-or-domain-research",
+              "testing",
+              "project-management"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "beginnerFriendly": {
+            "type": "boolean"
+          },
+          "mentorAvailable": {
+            "type": "boolean"
+          },
+          "participation": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["remote", "in-person", "hybrid"]
+            }
+          }
+        },
+        "required": [
+          "track",
+          "description",
+          "beginnerFriendly",
+          "mentorAvailable",
+          "participation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "timeCommitments": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["15 minutes", "1 hour", "2–4 hours", "weekly", "ongoing"]
+      }
+    },
+    "participation": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["remote", "in-person", "hybrid"]
+      }
+    },
+    "tasks": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "track": {
+            "type": "string",
+            "enum": [
+              "code",
+              "data",
+              "design",
+              "documentation",
+              "translation",
+              "accessibility-review",
+              "user-research",
+              "community-outreach",
+              "policy-or-domain-research",
+              "testing",
+              "project-management"
+            ]
+          },
+          "skills": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            }
+          },
+          "effort": {
+            "type": "string",
+            "enum": ["15 minutes", "1 hour", "2–4 hours", "weekly", "ongoing"]
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["starter", "intermediate", "advanced"]
+          },
+          "mentorAvailable": {
+            "type": "boolean"
+          },
+          "participation": {
+            "type": "string",
+            "enum": ["remote", "in-person", "hybrid"]
+          },
+          "collaboration": {
+            "type": "string",
+            "enum": ["independent", "collaborative", "either"]
+          },
+          "issueUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https:\\/\\/.*"
+          },
+          "acceptanceCriteria": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "description",
+          "track",
+          "skills",
+          "effort",
+          "difficulty",
+          "mentorAvailable",
+          "participation",
+          "collaboration",
+          "acceptanceCriteria"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "nextMilestone": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "timeline": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": ["date", "title", "description"],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 600
+      }
+    },
+    "dataSources": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 180
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https:\\/\\/.*"
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 600
+          }
+        },
+        "required": ["name", "url"],
+        "additionalProperties": false
+      }
+    },
+    "impactEvidence": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "evidenceUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https:\\/\\/.*"
+          },
+          "measuredAt": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "methodology": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 800
+          }
+        },
+        "required": ["claim", "evidenceUrl", "measuredAt"],
+        "additionalProperties": false
+      }
+    },
+    "meetingInfo": {
+      "type": "object",
+      "properties": {
+        "cadence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "publicNotesUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https:\\/\\/.*"
+        },
+        "joiningInstructions": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": ["cadence"],
+      "additionalProperties": false
+    },
+    "stewardship": {
+      "type": "object",
+      "properties": {
+        "indicators": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Maintainer available",
+              "Seeking co-maintainer",
+              "Beginner tasks available",
+              "Roadmap reviewed recently",
+              "Public meeting available",
+              "Release process documented",
+              "Support process documented",
+              "Paused with explanation",
+              "Archive candidate"
+            ]
+          }
+        },
+        "lastStewardshipReview": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      },
+      "required": ["indicators"],
+      "additionalProperties": false
+    },
+    "lastReviewed": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "createdAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "slug",
+    "tagline",
+    "summary",
+    "status",
+    "demo",
+    "boroughs",
+    "problemStatement",
+    "residentValue",
+    "currentScope",
+    "nonGoals",
+    "maintainers",
+    "partners",
+    "contributionTracks",
+    "skills",
+    "timeCommitments",
+    "participation",
+    "tasks",
+    "timeline",
+    "limitations",
+    "dataSources",
+    "impactEvidence",
+    "stewardship",
+    "lastReviewed",
+    "createdAt"
+  ],
+  "additionalProperties": false
+}

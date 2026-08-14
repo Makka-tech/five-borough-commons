@@ -1,0 +1,75 @@
+id: nyc-blockcheck
+name: NYC BlockCheck
+slug: nyc-blockcheck
+tagline: A proposed neighborhood tool for checking block-level public information.
+summary: NYC BlockCheck is a potential flagship project. Its purpose and repository connection must be confirmed with affected residents and prospective stewards before incubation.
+status: proposed
+demo: false
+boroughs:
+  - Citywide
+problemStatement: People may need a more understandable way to find and verify public, block-level information relevant to everyday decisions.
+residentValue: A carefully scoped tool could make verified public information easier to understand and report when it is incomplete.
+currentScope: Research the resident need, existing tools, public data quality, safety considerations, and sustainable stewardship before proposing software.
+nonGoals:
+  - This project does not claim that a repository or community partnership is connected.
+  - This project does not publish personal information or exact residential addresses.
+  - This project is not an official City service.
+maintainers:
+  - displayName: Seeking a prospective project steward
+    role: Incubation cannot proceed without a public stewardship commitment
+    availability: forming
+partners: []
+contributionTracks:
+  - track: user-research
+    description: Help validate whether the proposed problem is real, specific, safe, and underserved.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+      - in-person
+  - track: policy-or-domain-research
+    description: Research existing public resources, access restrictions, and non-software alternatives.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+skills:
+  - community research
+  - public-data research
+  - plain-language writing
+timeCommitments:
+  - 1 hour
+  - 2–4 hours
+  - weekly
+participation:
+  - remote
+  - in-person
+tasks:
+  - id: map-existing-public-resources
+    title: Map existing public resources before proposing a tool
+    description: Collect public links and a short note on what each resource already solves.
+    track: policy-or-domain-research
+    skills:
+      - web research
+    effort: 2–4 hours
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - The research note includes at least three public resources and their limitations.
+nextMilestone: Complete a public need-validation note and decide whether software is appropriate.
+timeline:
+  - date: "2026-08-13"
+    title: Proposal recorded
+    description: Potential flagship concept documented as a proposed project with no repository connected.
+limitations:
+  - Proposed project — repository not yet connected.
+  - The problem statement has not yet been validated with affected residents.
+dataSources: []
+impactEvidence: []
+stewardship:
+  indicators:
+    - Seeking co-maintainer
+lastReviewed: "2026-08-13"
+createdAt: "2026-08-13"

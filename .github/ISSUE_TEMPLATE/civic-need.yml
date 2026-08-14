@@ -1,0 +1,20 @@
+name: Propose a civic need
+description: Start community triage without sharing sensitive personal data.
+title: "need: "
+labels: ["status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include exact addresses, medical or immigration information, names of vulnerable people, or unsupported allegations. A need does not guarantee software."
+  - type: textarea
+    id: happening
+    attributes: { label: What is happening? }
+    validations: { required: true }
+  - type: textarea
+    id: affected
+    attributes: { label: Who is affected? }
+    validations: { required: true }
+  - type: input
+    id: location
+    attributes: { label: Borough, neighborhood, or citywide location (not an address) }
+    validations: { required: true }

@@ -1,0 +1,57 @@
+id: public-restroom-data-audit
+name: Public Restroom Data Audit
+slug: public-restroom-data-audit
+tagline: An example proposal for reviewing public restroom information.
+summary: Example proposal used to demonstrate the platform. This is not currently an active Five Borough Commons project.
+status: proposed
+demo: true
+boroughs:
+  - Manhattan
+  - Brooklyn
+  - Queens
+  - The Bronx
+  - Staten Island
+problemStatement: Public listings can become incomplete or difficult to understand.
+residentValue: A community-reviewed audit could identify information gaps for the responsible data publisher.
+currentScope: "Demonstration only: show how an audit project could describe boundaries, sources, and contribution work."
+nonGoals:
+  - This is not a live restroom map or a statement about any particular location.
+  - This does not collect reports about private businesses or individuals.
+maintainers:
+  - displayName: Example proposal only
+    role: No maintainer has been appointed
+    availability: inactive
+partners: []
+contributionTracks:
+  - track: data
+    description: Review public records for clear, documented discrepancies.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+  - track: accessibility-review
+    description: Review how users with different access needs understand source information.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+skills:
+  - data validation
+  - accessibility review
+timeCommitments:
+  - 15 minutes
+  - 1 hour
+participation:
+  - remote
+tasks: []
+nextMilestone: No milestone; this entry exists solely as an example.
+timeline: []
+limitations:
+  - Demo content only. No active work, data collection, or partners are represented.
+dataSources: []
+impactEvidence: []
+stewardship:
+  indicators:
+    - Seeking co-maintainer
+lastReviewed: "2026-08-13"
+createdAt: "2026-08-13"

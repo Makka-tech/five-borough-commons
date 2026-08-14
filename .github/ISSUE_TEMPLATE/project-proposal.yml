@@ -1,0 +1,13 @@
+name: Propose a project
+description: Suggest a scoped project after need research.
+title: "project: "
+labels: ["status:needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Resident problem and research }
+    validations: { required: true }
+  - type: textarea
+    id: scope
+    attributes: { label: Scope, non-goals, and prospective stewardship }
+    validations: { required: true }

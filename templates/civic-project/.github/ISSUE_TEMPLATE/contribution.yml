@@ -1,0 +1,15 @@
+name: Contribution task
+description: Create a well-scoped contribution task.
+body:
+  - type: textarea
+    id: context
+    attributes:
+      {
+        label: Context,
+        expected outcome,
+        acceptance criteria,
+        effort,
+        setup,
+        mentor,
+        and questions,
+      }

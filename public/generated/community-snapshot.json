@@ -1,0 +1,14 @@
+{
+  "$schema": "../../registry/schemas/community-snapshot.schema.json",
+  "generatedAt": "2026-08-13T00:00:00.000Z",
+  "source": "committed fixture",
+  "limitations": [
+    "This fixture is for local development and automated tests.",
+    "It does not represent live GitHub activity or real contributor counts."
+  ],
+  "repositories": [],
+  "issues": [],
+  "pullRequests": [],
+  "releases": [],
+  "contributors": []
+}

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fafaf9;
+  color: #1e293b;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #020617;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

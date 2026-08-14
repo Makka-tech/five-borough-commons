@@ -1,0 +1,54 @@
+id: cooling-center-language-pack
+name: Cooling Center Language Pack
+slug: cooling-center-language-pack
+tagline: An example proposal for plain-language, multilingual public-information materials.
+summary: Example proposal used to demonstrate the platform. This is not currently an active Five Borough Commons project.
+status: proposed
+demo: true
+boroughs:
+  - Citywide
+problemStatement: Time-sensitive public information can be difficult to understand or locate in a preferred language.
+residentValue: Reviewed, source-linked explanations could make it easier to understand published information.
+currentScope: "Demonstration only: show how translation and accessibility work can be a first-class project contribution."
+nonGoals:
+  - This does not publish official emergency information.
+  - This does not replace official sources or professional translation review.
+maintainers:
+  - displayName: Example proposal only
+    role: No maintainer has been appointed
+    availability: inactive
+partners: []
+contributionTracks:
+  - track: translation
+    description: Help review public-facing material for clarity and human translation readiness.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+  - track: documentation
+    description: Document sources, review status, and limitations.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+skills:
+  - translation review
+  - plain-language writing
+timeCommitments:
+  - 15 minutes
+  - 1 hour
+  - 2–4 hours
+participation:
+  - remote
+tasks: []
+nextMilestone: No milestone; this entry exists solely as an example.
+timeline: []
+limitations:
+  - Demo content only. No active translation or public-service information is represented.
+dataSources: []
+impactEvidence: []
+stewardship:
+  indicators:
+    - Seeking co-maintainer
+lastReviewed: "2026-08-13"
+createdAt: "2026-08-13"

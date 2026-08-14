@@ -1,0 +1,5 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "description": "{{RESIDENT_PROBLEM}}",
+  "status": "proposed"
+}

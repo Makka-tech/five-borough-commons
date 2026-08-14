@@ -1,0 +1,6 @@
+name: Report a security concern
+description: Do not disclose vulnerabilities or sensitive data publicly.
+body:
+  - type: markdown
+    attributes:
+      value: "Please use the private process in SECURITY.md. Do not include vulnerability details here."

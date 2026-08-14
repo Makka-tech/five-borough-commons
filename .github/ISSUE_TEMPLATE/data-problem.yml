@@ -1,0 +1,8 @@
+name: Report a data problem
+description: Report a public-data quality issue without personal data.
+labels: ["track:data"]
+body:
+  - type: textarea
+    id: source
+    attributes: { label: Public source and reproducible discrepancy }
+    validations: { required: true }

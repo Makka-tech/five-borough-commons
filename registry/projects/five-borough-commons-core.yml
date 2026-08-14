@@ -1,0 +1,164 @@
+id: five-borough-commons-core
+name: Five Borough Commons Core
+slug: five-borough-commons-core
+tagline: The open-source workshop for turning New Yorkers’ needs into maintainable civic projects.
+summary: This platform helps residents describe civic needs and helps contributors discover practical, community-led work across code and non-code tracks.
+status: prototype
+demo: false
+boroughs:
+  - Citywide
+problemStatement: Community civic-tech work is often hard to discover, difficult for newcomers to join, and vulnerable when stewardship is unclear.
+residentValue: Residents can see how a need is researched, scoped, and maintained without needing to understand GitHub first.
+currentScope: A static, GitHub-native directory, contribution finder, and governance layer with committed registry content and optional GitHub snapshots.
+nonGoals:
+  - This is not an official City of New York service.
+  - This is not a volunteer leaderboard or social network.
+  - This MVP does not collect resident accounts or exact addresses.
+maintainers:
+  - displayName: Five Borough Commons maintainership (forming)
+    role: Founding stewardship is being recruited publicly
+    availability: forming
+partners: []
+contributionTracks:
+  - track: code
+    description: Build and maintain the accessible web experience and local tools.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+  - track: documentation
+    description: Improve onboarding, governance, and plain-language project guidance.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+  - track: accessibility-review
+    description: Review keyboard, screen-reader, and plain-language experiences.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+skills:
+  - TypeScript
+  - plain-language writing
+  - accessibility testing
+  - community facilitation
+timeCommitments:
+  - 15 minutes
+  - 1 hour
+  - 2–4 hours
+  - ongoing
+participation:
+  - remote
+tasks:
+  - id: review-homepage-language
+    title: Review the homepage in plain language
+    description: Identify jargon or unexplained GitHub terms in the public introduction.
+    track: documentation
+    skills:
+      - plain-language review
+    effort: 15 minutes
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - A short list of suggested wording changes is submitted in a GitHub issue or discussion.
+  - id: test-keyboard-navigation
+    title: Test keyboard navigation on the projects directory
+    description: Check that filters, links, and focus indicators can be used without a mouse.
+    track: accessibility-review
+    skills:
+      - keyboard testing
+    effort: 1 hour
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - A reproducible report identifies each keyboard barrier and the expected behavior.
+  - id: add-a-project-status-test
+    title: Add a test for a project status label
+    description: Add a small Vitest case that confirms each project lifecycle status has a plain-language label.
+    track: code
+    skills:
+      - TypeScript
+      - testing
+    effort: 1 hour
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - The new test fails before the expected mapping is added and passes afterward.
+  - id: review-project-card-copy
+    title: Review a project card for clear resident language
+    description: Suggest a concise edit that makes a project card easier to understand without GitHub knowledge.
+    track: documentation
+    skills:
+      - plain-language review
+    effort: 15 minutes
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - The suggestion names the card and explains why the revised wording is clearer.
+  - id: draft-contribution-session-checklist
+    title: Draft a contribution-session accessibility checklist
+    description: Draft a short checklist for a welcoming, keyboard-accessible contribution session.
+    track: project-management
+    skills:
+      - facilitation
+      - accessibility
+    effort: 2–4 hours
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: collaborative
+    acceptanceCriteria:
+      - The draft covers access needs, agenda sharing, questions, and follow-up.
+  - id: test-mobile-project-filters
+    title: Test the project filters on a phone-sized viewport
+    description: Check whether the project directory filters remain understandable and usable on a small screen.
+    track: testing
+    skills:
+      - usability testing
+    effort: 1 hour
+    difficulty: starter
+    mentorAvailable: false
+    participation: remote
+    collaboration: independent
+    acceptanceCriteria:
+      - The report documents viewport size, steps taken, expected behavior, and observed behavior.
+  - id: plan-resident-research-guide
+    title: Plan a resident research guide
+    description: Outline questions that help a resident describe a civic need without asking for sensitive personal information.
+    track: user-research
+    skills:
+      - interview design
+      - privacy review
+    effort: 2–4 hours
+    difficulty: intermediate
+    mentorAvailable: false
+    participation: remote
+    collaboration: collaborative
+    acceptanceCriteria:
+      - The guide contains a consent-aware introduction and excludes sensitive-data prompts.
+nextMilestone: Publish the first reviewed contributor onboarding guide.
+timeline:
+  - date: "2026-08-13"
+    title: Prototype registry published
+    description: The first committed project registry and interface foundation are available for review.
+limitations:
+  - Community activity shown in local development is fixture data, not a live GitHub feed.
+  - Founding maintainers and public meeting details have not yet been confirmed.
+dataSources: []
+impactEvidence: []
+stewardship:
+  indicators:
+    - Seeking co-maintainer
+    - Beginner tasks available
+  lastStewardshipReview: "2026-08-13"
+lastReviewed: "2026-08-13"
+createdAt: "2026-08-13"

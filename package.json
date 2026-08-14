@@ -1,0 +1,53 @@
+{
+  "name": "five-borough-commons",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A GitHub-native civic technology project incubator for New York City.",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "validate:registry": "tsx scripts/validate-registry.ts",
+    "generate:schemas": "tsx scripts/generate-registry-schemas.ts",
+    "create:project": "tsx scripts/create-project.ts",
+    "check:community-files": "tsx scripts/check-community-files.ts",
+    "sync:github": "tsx scripts/sync-github.ts",
+    "create:labels": "tsx scripts/create-labels.ts",
+    "create:starter-issues": "tsx scripts/create-starter-issues.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "next": "^16.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.56.1",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.1.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.6"
+  }
+}

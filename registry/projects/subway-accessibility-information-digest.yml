@@ -1,0 +1,53 @@
+id: subway-accessibility-information-digest
+name: Subway Accessibility Information Digest
+slug: subway-accessibility-information-digest
+tagline: An example proposal for explaining public accessibility updates.
+summary: Example proposal used to demonstrate the platform. This is not currently an active Five Borough Commons project.
+status: proposed
+demo: true
+boroughs:
+  - Citywide
+problemStatement: Public transit accessibility information may be fragmented across multiple sources and hard to compare.
+residentValue: A carefully cited digest could help people understand published information and its limitations.
+currentScope: "Demonstration only: show a potential project’s research, accessibility review, and stewardship information."
+nonGoals:
+  - This is not live service advice or a replacement for official accessibility alerts.
+  - This does not make safety or operational claims.
+maintainers:
+  - displayName: Example proposal only
+    role: No maintainer has been appointed
+    availability: inactive
+partners: []
+contributionTracks:
+  - track: accessibility-review
+    description: Review the digest structure and language for accessibility and usefulness.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+  - track: user-research
+    description: Explore whether a digest would solve a real information problem.
+    beginnerFriendly: true
+    mentorAvailable: false
+    participation:
+      - remote
+skills:
+  - accessibility review
+  - user research
+timeCommitments:
+  - 1 hour
+  - 2–4 hours
+participation:
+  - remote
+tasks: []
+nextMilestone: No milestone; this entry exists solely as an example.
+timeline: []
+limitations:
+  - Demo content only. No live transit information, partners, or active project work is represented.
+dataSources: []
+impactEvidence: []
+stewardship:
+  indicators:
+    - Seeking co-maintainer
+lastReviewed: "2026-08-13"
+createdAt: "2026-08-13"

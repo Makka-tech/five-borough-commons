@@ -1,0 +1,8 @@
+id: { { PROJECT_SLUG } }
+name: { { PROJECT_NAME } }
+status: proposed
+boroughs: [{ { BOROUGHS } }]
+maintainers: { { MAINTAINERS } }
+contributionTracks: { { TRACKS } }
+currentScope: { { SCOPE } }
+nonGoals: { { NON_GOALS } }

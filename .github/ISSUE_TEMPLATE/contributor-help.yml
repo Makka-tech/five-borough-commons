@@ -1,0 +1,8 @@
+name: Request contributor help
+description: Ask for help with a clearly scoped task.
+labels: ["help wanted"]
+body:
+  - type: textarea
+    id: task
+    attributes: { label: Context, expected outcome, effort, setup, and question path }
+    validations: { required: true }

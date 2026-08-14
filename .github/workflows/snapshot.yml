@@ -1,0 +1,25 @@
+name: Refresh GitHub snapshot
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: npm run sync:github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ORG: ${{ vars.GITHUB_ORG }}
+          GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
+      - run: >-
+          git diff --quiet || (git config user.name 'github-actions[bot]' && git config user.email
+          '41898282+github-actions[bot]@users.noreply.github.com' && git add
+          public/generated/community-snapshot.json && git commit -m 'chore: refresh community snapshot'
+          && git push)

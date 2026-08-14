@@ -1,0 +1,8 @@
+name: Report an accessibility problem
+description: Help improve access for everyone.
+labels: ["track:accessibility"]
+body:
+  - type: textarea
+    id: issue
+    attributes: { label: What happened, expected behavior, and steps to reproduce }
+    validations: { required: true }
