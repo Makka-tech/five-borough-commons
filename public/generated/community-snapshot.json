@@ -1,14 +1,29 @@
 {
-  "$schema": "../../registry/schemas/community-snapshot.schema.json",
-  "generatedAt": "2026-08-13T00:00:00.000Z",
-  "source": "committed fixture",
+  "generatedAt": "2026-08-17T08:01:03.150Z",
+  "source": "github api",
   "limitations": [
-    "This fixture is for local development and automated tests.",
-    "It does not represent live GitHub activity or real contributor counts."
+    "Public GitHub metadata only. Private profile data is not copied.",
+    "Issue endpoints can include pull requests, so pull-request-shaped results are excluded from issues."
   ],
-  "repositories": [],
+  "repositories": [
+    {
+      "fullName": "Makka-tech/five-borough-commons",
+      "url": "https://github.com/Makka-tech/five-borough-commons",
+      "description": null,
+      "updatedAt": "2026-08-17T02:15:36Z",
+      "pushedAt": "2026-08-14T04:21:58Z",
+      "hasDiscussions": false
+    }
+  ],
   "issues": [],
   "pullRequests": [],
   "releases": [],
-  "contributors": []
+  "contributors": [
+    {
+      "repository": "Makka-tech/five-borough-commons",
+      "login": "Makka-tech",
+      "contributions": 1
+    }
+  ],
+  "discussions": []
 }
